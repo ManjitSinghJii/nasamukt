@@ -34,36 +34,66 @@ const Layout = () => {
       </main>
 
       {/* Footer */}
-      <footer className="flex justify-around items-center bg-[#1c3b2e] h-[350px] p-12 text-center text-sm text-gray-600">
-        <div className='text-white space-y-4'>
-            <h1 className='text-3xl font-bold'>Healing</h1>
-            <p className='text-lg font-medium'>Dedicated to organic solutions for addiction recovery.</p>
-            <Button className='!text-white !text-4xl' type='text' size='large'>{<FacebookOutlined />} </Button>
-            <Button className='!text-white !text-4xl' type='text' size='large'>{<InstagramOutlined />} </Button>
-            <p className='mt-10'>© 2025. All rights reserved.</p>
-        </div>
+      <footer className="bg-[#1c3b2e] text-white p-8 sm:p-12">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    {/* Brand Info */}
+    <div className="space-y-4">
+      <h1 className="text-3xl font-bold text-yellow-300">Healing</h1>
+      <p className="text-lg font-medium text-gray-200">
+        Dedicated to organic solutions for addiction recovery.
+      </p>
+      <div className="flex justify-center md:justify-start gap-4">
+        <Button className="!text-white !text-3xl" type="text" size="large">
+          <FacebookOutlined />
+        </Button>
+        <Button className="!text-white !text-3xl" type="text" size="large">
+          <InstagramOutlined />
+        </Button>
+      </div>
+      <p className="pt-6 text-sm text-gray-400">© 2025. All rights reserved.</p>
+    </div>
 
-        <div className='text-white space-y-4'>
-            <h1 className='text-2xl font-bold'>SUPPORT</h1>
-            <p className='text-md font-medium'>+91 9199157555</p>
-            <p className='text-lg font-medium'>latnashakwellness@gmail.com</p>
-        </div>
+    {/* Support Info */}
+    <div className="space-y-4">
+      <h2 className="text-2xl font-bold text-yellow-300">SUPPORT</h2>
+      <p className="text-md font-medium text-gray-200">+91 9199157555</p>
+      <p className="text-lg font-medium text-gray-200">latnashakwellness@gmail.com</p>
+    </div>
 
-        <div className='text-white space-y-4'>
-            <h1 className='text-2xl font-semibold'>WELLNESS</h1>
-            <div className=''>
-                <Form layout='vertical' >
-                    <Form.Item name='email' label={<h1 className='!text-white text-lg font-semibold'>Enter your Email</h1>} rules={[{required: true, type: 'email'}]} >
-                        <Input size='large' placeholder='abc@gmail.com' />
-                    </Form.Item>
+    {/* Newsletter Form */}
+    <div className="space-y-4">
+      <h2 className="text-2xl font-bold text-yellow-300">WELLNESS</h2>
+      <Form layout="vertical">
+        <Form.Item
+          name="email"
+          label={
+            <span className="text-lg font-semibold text-white">Enter your Email</span>
+          }
+          rules={[{ required: true, type: "email" }]}
+        >
+          <Input
+            size="large"
+            placeholder="abc@gmail.com"
+            className="rounded-md"
+          />
+        </Form.Item>
+        <Form.Item>
+          <Button
+            htmlType="submit"
+            size="large"
+            type="primary"
+            icon={<CheckOutlined />}
+            className="w-full md:w-auto"
+          >
+            Submit
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
+  </div>
+</footer>
 
-                    <Form.Item >
-                        <Button htmlType='submit' size='large' type='primary' icon={<CheckOutlined />} >Submit</Button>
-                    </Form.Item>
-                </Form>
-            </div>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -2,20 +2,17 @@ import React from 'react';
 import { Carousel } from 'antd';
 
 const Slider = () => (
-  <div className='mt-50'>
-    <Carousel autoplay>
-      <div>
-        <img src='images/a.jpg' alt="Slide 1" className="w-full h-[400px] object-cover" />
-      </div>
-      <div>
-        <img src='images/b.jpg' alt="Slide 2" className="w-full h-[400px] object-cover" />
-      </div>
-      <div>
-        <img src='images/c.jpg' alt="Slide 3" className="w-full h-[400px] object-cover" />
-      </div>
-      <div>
-        <img src='images/d.jpg' alt="Slide 4" className="w-full h-[400px] object-cover" />
-      </div>
+  <div className="mt-12">
+    <Carousel autoplay className="w-full">
+      {['a.jpg', 'b.jpg', 'c.jpg', 'd.jpg'].map((img, index) => (
+        <div key={index}>
+          <img
+            src={`images/${img}`}
+            alt={`Slide ${index + 1}`}
+            className="w-full h-[300px] sm:h-[300px] md:h-[400px] lg:h-[500px] object-cover"
+          />
+        </div>
+      ))}
     </Carousel>
   </div>
 );

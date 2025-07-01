@@ -6,7 +6,7 @@ const YouTubVideo = () => {
   return (
     <div>
         <div className='flex flex-col justify-center items-center p-14 gap-6'>
-            <h1 className='text-6xl text-zinc-600 font-semibold text-center'>🌿 Lat Mukt  –  Organic Solution for Freedom from Addiction</h1>
+            <h1 className='text-xl md:text-2xl lg:text-6xl text-zinc-600 font-semibold text-center'>🌿 Lat Mukt  –  Organic Solution for Freedom from Addiction</h1>
             <p className='text-green-600 text-xl font-semibold'>नशा मुक्त जीवन की ओर एक प्राकृतिक कदम।</p>
         </div>
         <div className="flex flex-col gap-10 justify-center items-center p-4">
