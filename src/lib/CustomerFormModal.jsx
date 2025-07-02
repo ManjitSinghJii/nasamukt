@@ -12,7 +12,7 @@ const CustomerFormModal = () => {
     title: 'Herbal Detox Tonic',
     description: 'A natural solution for drug and alcohol detox. Supports liver function and improves mental clarity.',
     price: 499,
-    image: '/images/product1.jpg',
+    image: '/images/a.jpg',
   };
 
   const handleFinish = (values) => {

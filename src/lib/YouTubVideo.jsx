@@ -10,7 +10,7 @@ const YouTubVideo = () => {
             <p className='text-green-600 text-xl font-semibold'>नशा मुक्त जीवन की ओर एक प्राकृतिक कदम।</p>
         </div>
         <div className="flex flex-col gap-10 justify-center items-center p-4">
-            <div className=" w-10/12  aspect-video">
+            <div className=" w-8/12  aspect-video">
                 <iframe
                     className="w-full h-full"
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=1&mute=0&rel=0&modestbranding=1"
