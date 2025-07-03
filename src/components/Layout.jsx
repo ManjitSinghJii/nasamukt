@@ -1,5 +1,5 @@
 // components/Layout.jsx
-import { CheckOutlined, FacebookOutlined, InstagramOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { CheckOutlined, FacebookOutlined, InstagramOutlined, LoginOutlined, LogoutOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Button, Form, Input } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
 
@@ -24,6 +24,18 @@ const Layout = () => {
             <Button size="large" type="text" className="!font-bold !text-3xl">
               <ShoppingCartOutlined />
             </Button>
+
+            <Link to='/login' >
+              <Button size="large" type='default' className="">
+                <LoginOutlined /> Login
+              </Button>
+            </Link>
+
+            <Link to='/signup' >
+              <Button size="large" type='default' danger className="">
+                <LogoutOutlined /> Signup
+              </Button>
+            </Link>
           </nav>
         </header>
       </div>
